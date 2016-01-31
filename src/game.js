@@ -92,7 +92,8 @@ function Game(n) {
             this.drawSquares();
             this.drawFlag();
             this.drawPlayer();
-            btn.addEventListener('click', this.movePlayer);
+            self = this;
+            btn.addEventListener('click', this.movePlayer.bind(this));
         }
 
         this.endGame = function(status) {
